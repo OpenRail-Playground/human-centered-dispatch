@@ -13,43 +13,18 @@ resourcen = [
 ]
 schichten = [
     Schicht(
-        id="ID1",
-        bedarfe={
-            "Gleismonteur/in": 2,
-            "Sicherheitschef/in": 1,
-            "TFF": 1,
-            "Vorarbeiter/in": 1,
-        },
-        zeitslot=1,
-        baustelle="Zürich",
-    ),
-    Schicht(
-        id="ID2",
-        bedarfe={
-            "Gleismonteur/in": 1,
-            "Sicherheitschef/in": 1,
-            "TFF": 1,
-            "Vorarbeiter/in": 1,
-        },
-        zeitslot=3,
-        baustelle="Flughafen",
-    ),
-    Schicht(
-        id="ID3",
-        bedarfe={
-            "Gleismonteur/in": 1,
-            "Sicherheitschef/in": 1,
-            "TFF": 1,
-            "Vorarbeiter/in": 1,
-        },
-        zeitslot=3,
-        baustelle="Zürich",
-    ),
+        id=f"ID{zeitslot}", bedarfe={"TFF": 1}, zeitslot=zeitslot, baustelle="Zürich"
+    )
+    for zeitslot in range(1, 18, 2)
+] + [
+    Schicht(id=f"ID31", bedarfe={"TFF": 1}, zeitslot=2, baustelle="Zürich",),
+    Schicht(id=f"ID32", bedarfe={"TFF": 1}, zeitslot=4, baustelle="Zürich"),
+    Schicht(id=f"ID33", bedarfe={"TFF": 1}, zeitslot=6, baustelle="Zürich")
 ]
 
 bedarfe = sorted({skill for schicht in schichten for skill in schicht.bedarfe})
 baustellen = sorted({schicht.baustelle for schicht in schichten})
 
-zeitlots = 3
+zeitlots = max(schicht.zeitslot for schicht in schichten)
 
 solve_dispatch(resourcen, schichten, bedarfe, baustellen, zeitlots)

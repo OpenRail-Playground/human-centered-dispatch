@@ -89,19 +89,36 @@ def solve_dispatch(
             <= len(schichten) * y[bsa]
         )
 
-    # Ensure that each resource is assigned to at most 7 shifts in any 8-day timeslot window
+    # Ensure that each resource is assigned to at most 7 shifts in any 9-day timeslot window (sleep time + relax time)
     for r in resourcen:
         for start_t in range(
-            1, timeslots - 7 + 2
+            1, timeslots - 8 + 2
         ):  # +2 because range is exclusive at end
             if start_t % 2 == 0:
                 # Skip even numbered timeslots because they are for night shifts
                 continue
             window_shifts = [
-                s for s in schichten if start_t <= s.zeitslot < start_t + 8
+                s for s in schichten if start_t <= s.zeitslot < start_t + 18
             ]
             model.addCons(
-                quicksum(x[(r.id, s.id, b)] for s in window_shifts for b in bedarfe) <= 7
+                quicksum(x[(r.id, s.id, b)] for s in window_shifts for b in bedarfe)
+                <= 7
+            )
+    
+    # Do at most 14 night shifts in any 30 day timeslot window
+    for r in resourcen:
+        for start_t in range(
+            1, timeslots - 30 + 2
+        ):  # +2 because range is exclusive at end
+            if start_t % 2 == 0:
+                # Skip even numbered timeslots because they are for night shifts
+                continue
+            window_shifts = [
+                s for s in schichten if start_t <= s.zeitslot < start_t + 60
+            ]
+            model.addCons(
+                quicksum(x[(r.id, s.id, b)] for s in window_shifts for b in bedarfe if s.zeitslot % 2 == 0)
+                <= 14
             )
 
     # Ensure that no resource is assigned to shifts in consecutive timeslots i.e. do not work too munch
@@ -113,7 +130,9 @@ def solve_dispatch(
                 for s2 in shifts_next:
                     for b1 in bedarfe:
                         for b2 in bedarfe:
-                            model.addCons(x[(r.id, s1.id, b1)] + x[(r.id, s2.id, b2)] <= 1)
+                            model.addCons(
+                                x[(r.id, s1.id, b1)] + x[(r.id, s2.id, b2)] <= 1
+                            )
 
     # Optionally, if you want to ensure that a resource is not assigned to overlapping timeslots,
     # you can group by timeslot as well:
@@ -127,7 +146,6 @@ def solve_dispatch(
     #             ) <= 1
     #         )
 
-    
     model.optimize()
 
     sol = model.getBestSol()
@@ -142,8 +160,9 @@ def solve_dispatch(
                     assignments[key] = []
                 assignments[key].append((r, b))
         # Print grouped assignments
-        for (timeslot, schicht_id, baustelle) in sorted(assignments.keys()):
-            print(f"Timeslot {timeslot}, Shift {schicht_id} (Baustelle: {baustelle}):")
+        for timeslot, schicht_id, baustelle in sorted(assignments.keys()):
+            timeslot_desc = f"Day {timeslot // 2 + 1}" if timeslot % 2 == 1 else f"Night {timeslot // 2}"
+            print(f"Timeslot {timeslot_desc}, Shift {schicht_id} (Baustelle: {baustelle}):")
             for r, b in assignments[(timeslot, schicht_id, baustelle)]:
                 print(f"  Resource {r} assigned for Bedarf/Role '{b}'")
     else:
