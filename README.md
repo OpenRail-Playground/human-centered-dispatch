@@ -12,7 +12,23 @@ This project has been initiated during the [Hack4Rail 2025](https://hack4rail.ev
 
 ## Install
 
-*How can a user install the software?*
+Install uv first:
+```shell
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+Install dependencies:
+```shell
+uv sync
+```
+
+Optionally, install Hurl to run API tests: https://hurl.dev/docs/installation.html
+
+## Running
+
+```shell
+uv run src/dispatch_small.py
+```
 
 ## License
 

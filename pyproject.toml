@@ -1,0 +1,11 @@
+[project]
+name = "uv-fastapi-pyscipopt"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[standard]>=0.115.13",
+    "pyscipopt>=5.5.0",
+    "ruff>=0.12.0",
+]
