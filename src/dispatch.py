@@ -15,6 +15,14 @@ class Schicht:
 class Resource:
     id: str
     hard_skills: list[str]  # list of skills this resource has to satisfy bedarfe
+    extern: bool = False  # whether this resource is an external contractor
+
+    def kosten(self) -> int:
+        skill_costs = len(self.hard_skills)
+        if self.extern:
+            # External contractors have a higher cost and we want to assure that we always take internals first
+            skill_costs *= 20
+        return skill_costs
 
     def deckt_bedarf(self, bedarf: str) -> int:
         return 1 if bedarf in self.hard_skills else 0
@@ -36,7 +44,7 @@ def solve_dispatch(
         for s in schichten:
             for b in bedarfe:
                 x[(r.id, s.id, b)] = model.addVar(
-                    vtype="BINARY", name=f"x_{r.id}_{s.id}_{b}", obj=1
+                    vtype="BINARY", name=f"x_{r.id}_{s.id}_{b}", obj=r.kosten()
                 )
 
     # variables for penalties if shifts of BSA are not stable i.e. different resources in different shifts of same BSA
