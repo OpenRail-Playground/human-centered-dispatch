@@ -134,6 +134,42 @@ def solve_dispatch(
                                 x[(r.id, s1.id, b1)] + x[(r.id, s2.id, b2)] <= 1
                             )
 
+    # punish if resource assignment changing for a following shift of a BSA
+
+    # For each baustelle, for each pair of consecutive shifts, and for each resource and bedarf,
+    # introduce a penalty variable if the assignment changes between consecutive shifts.
+    change_penalties = {}
+    for bsa in baustellen:
+        # Get all shifts for this baustelle, sorted by timeslot
+        bsa_shifts_day = sorted([shift for shift in shifts_by_baustelle(schichten, bsa) if shift.zeitslot % 2 == 1], key=lambda s: s.zeitslot)
+        bsa_shifts_night = sorted([shift for shift in shifts_by_baustelle(schichten, bsa) if shift.zeitslot % 2 == 0], key=lambda s: s.zeitslot)
+        for i in range(len(bsa_shifts_day) - 1):
+            s1 = bsa_shifts_day[i]
+            s2 = bsa_shifts_day[i + 1]
+            for r in resourcen:
+                for b in bedarfe:
+                    # Binary variable: 1 if assignment changes between s1 and s2 for resource r and bedarf b
+                    vname = f"change_{bsa}_{s1.id}_{s2.id}_{r.id}_{b}"
+                    change_var = model.addVar(vtype="BINARY", name=vname, obj=10)  # obj=10: penalty weight
+                    change_penalties[(bsa, s1.id, s2.id, r.id, b)] = change_var
+                    # Add constraints to set change_var to 1 if assignment changes
+                    # |x1 - x2| <= change_var
+                    model.addCons(x[(r.id, s1.id, b)] - x[(r.id, s2.id, b)] <= change_var)
+                    model.addCons(x[(r.id, s2.id, b)] - x[(r.id, s1.id, b)] <= change_var)
+        for i in range(len(bsa_shifts_night) - 1):
+            s1 = bsa_shifts_night[i]
+            s2 = bsa_shifts_night[i + 1]
+            for r in resourcen:
+                for b in bedarfe:
+                    # Binary variable: 1 if assignment changes between s1 and s2 for resource r and bedarf b
+                    vname = f"change_{bsa}_{s1.id}_{s2.id}_{r.id}_{b}"
+                    change_var = model.addVar(vtype="BINARY", name=vname, obj=10)  # obj=10: penalty weight
+                    change_penalties[(bsa, s1.id, s2.id, r.id, b)] = change_var
+                    # Add constraints to set change_var to 1 if assignment changes
+                    # |x1 - x2| <= change_var
+                    model.addCons(x[(r.id, s1.id, b)] - x[(r.id, s2.id, b)] <= change_var)
+                    model.addCons(x[(r.id, s2.id, b)] - x[(r.id, s1.id, b)] <= change_var)
+
     # Optionally, if you want to ensure that a resource is not assigned to overlapping timeslots,
     # you can group by timeslot as well:
     # for r in resourcen:
