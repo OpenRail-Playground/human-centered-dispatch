@@ -1,4 +1,4 @@
-# Our Cool Project
+# Human-Centered Dispatch
 
 *Short description what the project is about*
 
