@@ -1,16 +1,16 @@
 from dispatch import solve_dispatch, Schicht, Resource
 
 resourcen = [
-    Resource(id="r1", hard_skills=["b1", "b2"]),
-    Resource(id="r2", hard_skills=["b1"]),
-    Resource(id="r3", hard_skills=["b2"]),
+    Resource(id="Max", hard_skills=["Gleismonteur/in", "Sicherheitschef/in"]),
+    Resource(id="Lisa", hard_skills=["Gleismonteur/in"]),
+    Resource(id="Alex", hard_skills=["Sicherheitschef/in"]),
 ]
 schichten = [
-    Schicht(id="s1", bedarfe={"b1": 2, "b2": 1}, zeitslot=1, baustelle="bsa1"),
-    Schicht(id="s2", bedarfe={"b1": 1, "b2": 2}, zeitslot=3, baustelle="bsa2"),
+    Schicht(id="s1", bedarfe={"Gleismonteur/in": 2, "Sicherheitschef/in": 1}, zeitslot=1, baustelle="Zürich"),
+    Schicht(id="s2", bedarfe={"Gleismonteur/in": 1, "Sicherheitschef/in": 1}, zeitslot=3, baustelle="Flughafen"),
 ]
-bedarfe = ["b1", "b2"]
-baustellen = ["bsa1", "bsa2"]
+bedarfe = ["Gleismonteur/in", "Sicherheitschef/in"]
+baustellen = ["Zürich", "Flughafen"]
 
 zeitlots = 3
 

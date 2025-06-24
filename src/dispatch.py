@@ -124,10 +124,20 @@ def solve_dispatch(
 
     sol = model.getBestSol()
     if model.getStatus() == "optimal" and sol is not None:
+        # Group assignments by timeslot and shift/baustelle
+        assignments = {}
         for (r, s, b), var in x.items():
             if sol[var] > 0.5:
                 schicht = next(ss for ss in schichten if ss.id == s)
-                print(f"Resource {r} assigned to shift (Baustelle: {schicht.baustelle}, Timeslot: {schicht.zeitslot}) for Bedarf '{b}'")
+                key = (schicht.zeitslot, schicht.id, schicht.baustelle)
+                if key not in assignments:
+                    assignments[key] = []
+                assignments[key].append((r, b))
+        # Print grouped assignments
+        for (timeslot, schicht_id, baustelle) in sorted(assignments.keys()):
+            print(f"Timeslot {timeslot}, Shift {schicht_id} (Baustelle: {baustelle}):")
+            for r, b in assignments[(timeslot, schicht_id, baustelle)]:
+                print(f"  Resource {r} assigned for Bedarf/Role '{b}'")
     else:
         print("No feasible solution found.")
 
