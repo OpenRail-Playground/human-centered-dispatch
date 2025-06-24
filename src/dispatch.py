@@ -78,16 +78,17 @@ def solve_dispatch(
 
     # Ensure that each baustelle has a stable shift, i.e., the same resource is assigned across all shifts
     # TODO correct?
-    for bsa in baustellen:
-        model.addCons(
-            quicksum(
-                x[(r.id, s.id, b)]
-                for r in resourcen
-                for s in shifts_by_baustelle(schichten, bsa)
-                for b in bedarfe
-            )
-            <= len(schichten) * y[bsa]
-        )
+    # Not needed, we count changes in the shifts instead
+    # for bsa in baustellen:
+    #     model.addCons(
+    #         quicksum(
+    #             x[(r.id, s.id, b)]
+    #             for r in resourcen
+    #             for s in shifts_by_baustelle(schichten, bsa)
+    #             for b in bedarfe
+    #         )
+    #         <= len(schichten) * y[bsa]
+    #     )
 
     # Ensure that each resource is assigned to at most 7 shifts in any 9-day timeslot window (sleep time + relax time)
     for r in resourcen:
@@ -169,6 +170,33 @@ def solve_dispatch(
                     # |x1 - x2| <= change_var
                     model.addCons(x[(r.id, s1.id, b)] - x[(r.id, s2.id, b)] <= change_var)
                     model.addCons(x[(r.id, s2.id, b)] - x[(r.id, s1.id, b)] <= change_var)
+
+    # Add constraints so that resources work equally many shifts across all baustellen
+    # Introduce variables for the total number of shifts assigned to each resource
+    total_shifts = {}
+    for r in resourcen:
+        total_shifts[r.id] = model.addVar(vtype="INTEGER", name=f"total_shifts_{r.id}")
+
+        # total_shifts[r.id] = sum over all schichten and bedarfe
+        model.addCons(
+            total_shifts[r.id]
+            == quicksum(x[(r.id, s.id, b)] for s in schichten for b in bedarfe)
+        )
+
+    # Introduce variables for the minimum and maximum number of shifts assigned to any resource
+    min_shifts = model.addVar(vtype="INTEGER", name="min_shifts")
+    max_shifts = model.addVar(vtype="INTEGER", name="max_shifts")
+
+    for r in resourcen:
+        model.addCons(total_shifts[r.id] >= min_shifts)
+        model.addCons(total_shifts[r.id] <= max_shifts)
+
+    # Optionally, add a penalty to the objective to minimize the difference between max and min shifts
+    # This encourages fairness in shift allocation
+    model.setObjective(
+        model.getObjective() + (max_shifts - min_shifts) * 5  # adjust weight as needed
+    )
+    # End of "Add constraints so that resources work equally many shifts across all baustellen"
 
     # Optionally, if you want to ensure that a resource is not assigned to overlapping timeslots,
     # you can group by timeslot as well:
