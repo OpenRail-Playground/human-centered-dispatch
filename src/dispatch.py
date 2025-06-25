@@ -16,6 +16,7 @@ class Resource:
     id: str
     hard_skills: list[str]  # list of skills this resource has to satisfy bedarfe
     extern: bool = False  # whether this resource is an external contractor
+    frei_zeitslots: list[int] = None  # optional list of free timeslots, not used in this example
 
     def kosten(self) -> int:
         skill_costs = len(self.hard_skills)
@@ -55,8 +56,6 @@ def solve_dispatch(
     for s in schichten:
         for b in bedarfe:
             # ensure that each demand is covered by exactly one resource in each shift
-            print(f"{s.id=}: {s.bedarfe[b]=}")
-            print(list([x[(r.id, s.id, b)] * r.deckt_bedarf(b) for r in resourcen]))
             model.addCons(
                 quicksum(x[(r.id, s.id, b)] * r.deckt_bedarf(b) for r in resourcen)
                 >= s.bedarfe[b]
@@ -65,8 +64,6 @@ def solve_dispatch(
     # Ensure that each resource is only scheduled to one shift and one bedarf across all timeslots
     for r in resourcen:
         for t in range(1, timeslots + 1):
-            print(f"Resource {r.id} at timeslot {t}")
-            print(f"Shifts: {[s.id for s in shifts_by_timeslot(schichten, t)]}")
             model.addCons(
                 quicksum(
                     x[(r.id, s.id, b)]
@@ -140,36 +137,29 @@ def solve_dispatch(
     # For each baustelle, for each pair of consecutive shifts, and for each resource and bedarf,
     # introduce a penalty variable if the assignment changes between consecutive shifts.
     change_penalties = {}
+    def add_change_penalties(bsa_shifts):
+        for i in range(len(bsa_shifts) - 1):
+            s1 = bsa_shifts[i]
+            s2 = bsa_shifts[i + 1]
+            for r in resourcen:
+                for b in bedarfe:
+                    vname = f"change_{bsa}_{s1.id}_{s2.id}_{r.id}_{b}"
+                    change_var = model.addVar(vtype="BINARY", name=vname, obj=10)
+                    change_penalties[(bsa, s1.id, s2.id, r.id, b)] = change_var
+                    model.addCons(x[(r.id, s1.id, b)] - x[(r.id, s2.id, b)] <= change_var)
+                    model.addCons(x[(r.id, s2.id, b)] - x[(r.id, s1.id, b)] <= change_var)
+
     for bsa in baustellen:
-        # Get all shifts for this baustelle, sorted by timeslot
-        bsa_shifts_day = sorted([shift for shift in shifts_by_baustelle(schichten, bsa) if shift.zeitslot % 2 == 1], key=lambda s: s.zeitslot)
-        bsa_shifts_night = sorted([shift for shift in shifts_by_baustelle(schichten, bsa) if shift.zeitslot % 2 == 0], key=lambda s: s.zeitslot)
-        for i in range(len(bsa_shifts_day) - 1):
-            s1 = bsa_shifts_day[i]
-            s2 = bsa_shifts_day[i + 1]
-            for r in resourcen:
-                for b in bedarfe:
-                    # Binary variable: 1 if assignment changes between s1 and s2 for resource r and bedarf b
-                    vname = f"change_{bsa}_{s1.id}_{s2.id}_{r.id}_{b}"
-                    change_var = model.addVar(vtype="BINARY", name=vname, obj=10)  # obj=10: penalty weight
-                    change_penalties[(bsa, s1.id, s2.id, r.id, b)] = change_var
-                    # Add constraints to set change_var to 1 if assignment changes
-                    # |x1 - x2| <= change_var
-                    model.addCons(x[(r.id, s1.id, b)] - x[(r.id, s2.id, b)] <= change_var)
-                    model.addCons(x[(r.id, s2.id, b)] - x[(r.id, s1.id, b)] <= change_var)
-        for i in range(len(bsa_shifts_night) - 1):
-            s1 = bsa_shifts_night[i]
-            s2 = bsa_shifts_night[i + 1]
-            for r in resourcen:
-                for b in bedarfe:
-                    # Binary variable: 1 if assignment changes between s1 and s2 for resource r and bedarf b
-                    vname = f"change_{bsa}_{s1.id}_{s2.id}_{r.id}_{b}"
-                    change_var = model.addVar(vtype="BINARY", name=vname, obj=10)  # obj=10: penalty weight
-                    change_penalties[(bsa, s1.id, s2.id, r.id, b)] = change_var
-                    # Add constraints to set change_var to 1 if assignment changes
-                    # |x1 - x2| <= change_var
-                    model.addCons(x[(r.id, s1.id, b)] - x[(r.id, s2.id, b)] <= change_var)
-                    model.addCons(x[(r.id, s2.id, b)] - x[(r.id, s1.id, b)] <= change_var)
+        bsa_shifts_day = sorted(
+            [shift for shift in shifts_by_baustelle(schichten, bsa) if shift.zeitslot % 2 == 1],
+            key=lambda s: s.zeitslot
+        )
+        bsa_shifts_night = sorted(
+            [shift for shift in shifts_by_baustelle(schichten, bsa) if shift.zeitslot % 2 == 0],
+            key=lambda s: s.zeitslot
+        )
+        add_change_penalties(bsa_shifts_day)
+        add_change_penalties(bsa_shifts_night)
 
     # Add constraints so that resources work equally many shifts across all baustellen
     # Introduce variables for the total number of shifts assigned to each resource
@@ -197,6 +187,14 @@ def solve_dispatch(
         model.getObjective() + (max_shifts - min_shifts) * 5  # adjust weight as needed
     )
     # End of "Add constraints so that resources work equally many shifts across all baustellen"
+
+    # Add constraints to not schedule shifts if resource has frei_zeitslot in shift zeitslot
+    for r in resourcen:
+        if r.frei_zeitslots is not None:
+            for s in schichten:
+                if s.zeitslot in r.frei_zeitslots:
+                    for b in bedarfe:
+                        model.addCons(x[(r.id, s.id, b)] == 0)
 
     # Optionally, if you want to ensure that a resource is not assigned to overlapping timeslots,
     # you can group by timeslot as well:

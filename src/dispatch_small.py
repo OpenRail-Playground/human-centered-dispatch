@@ -2,7 +2,7 @@ from dispatch import solve_dispatch, Schicht, Resource
 
 resourcen = [
     Resource(id="Max", hard_skills=["Gleismonteur/in", "Sicherheitschef/in"]),
-    Resource(id="Lisa", hard_skills=["Gleismonteur/in"]),
+    Resource(id="Lisa", hard_skills=["Gleismonteur/in"], frei_zeitslots=[1, 2, 3]),
     Resource(id="Alex", hard_skills=["Sicherheitschef/in"]),
     Resource(id="Moritz", hard_skills=["Gleismonteur/in"]),
     Resource(id="Petra", hard_skills=["Sicherheitschef/in"]),
