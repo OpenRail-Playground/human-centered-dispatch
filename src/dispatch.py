@@ -226,10 +226,14 @@ def solve_dispatch(
     #             ) <= 1
     #         )
 
+    print("Starting to solve. You can abort with Ctrl+C and get the current solution even if not optimal.")
+
     model.optimize()
 
     sol = model.getBestSol()
-    if model.getStatus() == "optimal" and sol is not None:
+    if sol is None:
+        sol = model.getSol()
+    if model.getStatus() != "infeasible" and sol is not None:
         # Group assignments by timeslot and shift/baustelle
         assignments = {}
         for (r, s, b), var in x.items():

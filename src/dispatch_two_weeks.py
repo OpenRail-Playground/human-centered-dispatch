@@ -17,9 +17,9 @@ hard_skills = [
 hard_skill_names = [name for name, _ in hard_skills]
 
 num_resources = 150
-num_shifts = 500
-num_baustellen = 50
-num_timeslots = 60
+num_shifts = 50
+num_baustellen = 25
+num_timeslots = 30  # 15 days, 2 shifts per day
 
 # Calculate number of resources per skill
 skill_counts = {name: int(frac * num_resources) for name, frac in hard_skills}

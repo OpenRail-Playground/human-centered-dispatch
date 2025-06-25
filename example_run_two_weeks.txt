@@ -1,0 +1,816 @@
+time uv run src/dispatch_one_months.py 
+Resources: Resource(id='R1', hard_skills=['Gleismonteur/in', 'Vorarbeiter/in'], extern=False, frei_zeitslots=[])
+Resource(id='R2', hard_skills=['Gleismonteur/in', 'TFF', 'Sicherheitschef/in'], extern=False, frei_zeitslots=None)
+Resource(id='R3', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R4', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=None)
+Resource(id='R5', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R6', hard_skills=['Vorarbeiter/in'], extern=False, frei_zeitslots=[])
+Resource(id='R7', hard_skills=['Vorarbeiter/in'], extern=True, frei_zeitslots=[])
+Resource(id='R8', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R9', hard_skills=['Vorarbeiter/in'], extern=True, frei_zeitslots=[])
+Resource(id='R10', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R11', hard_skills=['Gleismonteur/in', 'Vorarbeiter/in'], extern=False, frei_zeitslots=[])
+Resource(id='R12', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R13', hard_skills=['Vorarbeiter/in'], extern=False, frei_zeitslots=[])
+Resource(id='R14', hard_skills=['Vorarbeiter/in'], extern=False, frei_zeitslots=[])
+Resource(id='R15', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R16', hard_skills=['Gleismonteur/in', 'Vorarbeiter/in'], extern=False, frei_zeitslots=None)
+Resource(id='R17', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R18', hard_skills=['Gleismonteur/in', 'Vorarbeiter/in'], extern=False, frei_zeitslots=[])
+Resource(id='R19', hard_skills=['Gleismonteur/in', 'Sicherheitschef/in'], extern=False, frei_zeitslots=[])
+Resource(id='R20', hard_skills=['Gleismonteur/in', 'Sicherheitschef/in'], extern=False, frei_zeitslots=[])
+Resource(id='R21', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R22', hard_skills=['TFF'], extern=False, frei_zeitslots=[])
+Resource(id='R23', hard_skills=['TFF'], extern=True, frei_zeitslots=[])
+Resource(id='R24', hard_skills=['Gleismonteur/in', 'Vorarbeiter/in'], extern=False, frei_zeitslots=None)
+Resource(id='R25', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R26', hard_skills=['Gleismonteur/in', 'TFF'], extern=False, frei_zeitslots=[])
+Resource(id='R27', hard_skills=['Gleismonteur/in'], extern=True, frei_zeitslots=[])
+Resource(id='R28', hard_skills=['Vorarbeiter/in'], extern=True, frei_zeitslots=[])
+Resource(id='R29', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R30', hard_skills=['Gleismonteur/in', 'Vorarbeiter/in', 'Sicherheitschef/in'], extern=False, frei_zeitslots=[])
+Resource(id='R31', hard_skills=['Gleismonteur/in', 'Sicherheitschef/in'], extern=False, frei_zeitslots=[])
+Resource(id='R32', hard_skills=['Vorarbeiter/in'], extern=False, frei_zeitslots=[])
+Resource(id='R33', hard_skills=['Gleismonteur/in', 'Vorarbeiter/in'], extern=False, frei_zeitslots=[])
+Resource(id='R34', hard_skills=['Gleismonteur/in'], extern=True, frei_zeitslots=None)
+Resource(id='R35', hard_skills=['Gleismonteur/in'], extern=True, frei_zeitslots=[])
+Resource(id='R36', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R37', hard_skills=['Vorarbeiter/in'], extern=False, frei_zeitslots=[])
+Resource(id='R38', hard_skills=['Vorarbeiter/in'], extern=True, frei_zeitslots=[])
+Resource(id='R39', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R40', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R41', hard_skills=['Gleismonteur/in'], extern=True, frei_zeitslots=[])
+Resource(id='R42', hard_skills=['Gleismonteur/in', 'Vorarbeiter/in'], extern=False, frei_zeitslots=[])
+Resource(id='R43', hard_skills=['Gleismonteur/in', 'Sicherheitschef/in'], extern=False, frei_zeitslots=None)
+Resource(id='R44', hard_skills=['TFF'], extern=False, frei_zeitslots=None)
+Resource(id='R45', hard_skills=['Vorarbeiter/in'], extern=False, frei_zeitslots=[])
+Resource(id='R46', hard_skills=['Vorarbeiter/in'], extern=False, frei_zeitslots=[])
+Resource(id='R47', hard_skills=['Vorarbeiter/in'], extern=False, frei_zeitslots=[])
+Resource(id='R48', hard_skills=['TFF'], extern=False, frei_zeitslots=[])
+Resource(id='R49', hard_skills=['Gleismonteur/in'], extern=True, frei_zeitslots=[])
+Resource(id='R50', hard_skills=['TFF'], extern=False, frei_zeitslots=[])
+Resource(id='R51', hard_skills=['Gleismonteur/in', 'TFF'], extern=False, frei_zeitslots=[])
+Resource(id='R52', hard_skills=['Gleismonteur/in'], extern=True, frei_zeitslots=[])
+Resource(id='R53', hard_skills=['Vorarbeiter/in', 'Sicherheitschef/in'], extern=False, frei_zeitslots=[])
+Resource(id='R54', hard_skills=['Vorarbeiter/in'], extern=True, frei_zeitslots=None)
+Resource(id='R55', hard_skills=['Vorarbeiter/in'], extern=False, frei_zeitslots=[])
+Resource(id='R56', hard_skills=['Sicherheitschef/in'], extern=False, frei_zeitslots=[])
+Resource(id='R57', hard_skills=['Gleismonteur/in', 'Vorarbeiter/in', 'Sicherheitschef/in'], extern=False, frei_zeitslots=[])
+Resource(id='R58', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R59', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R60', hard_skills=['Sicherheitschef/in'], extern=True, frei_zeitslots=[])
+Resource(id='R61', hard_skills=['Gleismonteur/in', 'Vorarbeiter/in', 'Sicherheitschef/in'], extern=False, frei_zeitslots=[])
+Resource(id='R62', hard_skills=['TFF'], extern=False, frei_zeitslots=[])
+Resource(id='R63', hard_skills=['Vorarbeiter/in'], extern=True, frei_zeitslots=[])
+Resource(id='R64', hard_skills=['Gleismonteur/in', 'Vorarbeiter/in'], extern=False, frei_zeitslots=[])
+Resource(id='R65', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R66', hard_skills=['TFF'], extern=False, frei_zeitslots=[])
+Resource(id='R67', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R68', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R69', hard_skills=['Gleismonteur/in'], extern=True, frei_zeitslots=[])
+Resource(id='R70', hard_skills=['Sicherheitschef/in'], extern=False, frei_zeitslots=None)
+Resource(id='R71', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R72', hard_skills=['TFF'], extern=True, frei_zeitslots=[])
+Resource(id='R73', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R74', hard_skills=['Gleismonteur/in', 'Sicherheitschef/in'], extern=True, frei_zeitslots=[])
+Resource(id='R75', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R76', hard_skills=['Gleismonteur/in', 'Vorarbeiter/in'], extern=False, frei_zeitslots=None)
+Resource(id='R77', hard_skills=['Vorarbeiter/in', 'Sicherheitschef/in'], extern=False, frei_zeitslots=[])
+Resource(id='R78', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R79', hard_skills=['Gleismonteur/in', 'Sicherheitschef/in'], extern=False, frei_zeitslots=[])
+Resource(id='R80', hard_skills=['Vorarbeiter/in'], extern=True, frei_zeitslots=[])
+Resource(id='R81', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R82', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R83', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R84', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R85', hard_skills=['Vorarbeiter/in'], extern=True, frei_zeitslots=[])
+Resource(id='R86', hard_skills=['Gleismonteur/in', 'TFF'], extern=False, frei_zeitslots=[])
+Resource(id='R87', hard_skills=['Gleismonteur/in', 'Vorarbeiter/in'], extern=False, frei_zeitslots=None)
+Resource(id='R88', hard_skills=['Vorarbeiter/in'], extern=False, frei_zeitslots=[])
+Resource(id='R89', hard_skills=['Sicherheitschef/in'], extern=False, frei_zeitslots=[])
+Resource(id='R90', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R91', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R92', hard_skills=['Vorarbeiter/in'], extern=False, frei_zeitslots=[])
+Resource(id='R93', hard_skills=['Sicherheitschef/in'], extern=True, frei_zeitslots=[])
+Resource(id='R94', hard_skills=['Gleismonteur/in', 'Vorarbeiter/in'], extern=False, frei_zeitslots=[])
+Resource(id='R95', hard_skills=['Gleismonteur/in', 'Vorarbeiter/in'], extern=False, frei_zeitslots=[])
+Resource(id='R96', hard_skills=['Gleismonteur/in', 'TFF'], extern=False, frei_zeitslots=[])
+Resource(id='R97', hard_skills=['Sicherheitschef/in'], extern=False, frei_zeitslots=[])
+Resource(id='R98', hard_skills=['Vorarbeiter/in'], extern=False, frei_zeitslots=[])
+Resource(id='R99', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R100', hard_skills=['Gleismonteur/in', 'Vorarbeiter/in'], extern=True, frei_zeitslots=[])
+Resource(id='R101', hard_skills=['Gleismonteur/in', 'Vorarbeiter/in'], extern=False, frei_zeitslots=None)
+Resource(id='R102', hard_skills=['Gleismonteur/in', 'Vorarbeiter/in'], extern=False, frei_zeitslots=[])
+Resource(id='R103', hard_skills=['Gleismonteur/in'], extern=True, frei_zeitslots=[])
+Resource(id='R104', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R105', hard_skills=['TFF'], extern=True, frei_zeitslots=[])
+Resource(id='R106', hard_skills=['Gleismonteur/in', 'Vorarbeiter/in'], extern=False, frei_zeitslots=[])
+Resource(id='R107', hard_skills=['TFF'], extern=False, frei_zeitslots=[])
+Resource(id='R108', hard_skills=['Gleismonteur/in', 'Vorarbeiter/in'], extern=False, frei_zeitslots=[])
+Resource(id='R109', hard_skills=['Gleismonteur/in', 'Sicherheitschef/in'], extern=False, frei_zeitslots=[])
+Resource(id='R110', hard_skills=['Sicherheitschef/in'], extern=False, frei_zeitslots=[])
+Resource(id='R111', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=None)
+Resource(id='R112', hard_skills=['Gleismonteur/in'], extern=True, frei_zeitslots=[])
+Resource(id='R113', hard_skills=['Vorarbeiter/in'], extern=False, frei_zeitslots=[])
+Resource(id='R114', hard_skills=['Gleismonteur/in', 'Vorarbeiter/in'], extern=False, frei_zeitslots=[])
+Resource(id='R115', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R116', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R117', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R118', hard_skills=['Gleismonteur/in'], extern=True, frei_zeitslots=[])
+Resource(id='R119', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R120', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R121', hard_skills=['Gleismonteur/in'], extern=True, frei_zeitslots=[])
+Resource(id='R122', hard_skills=['Gleismonteur/in', 'Vorarbeiter/in', 'TFF'], extern=False, frei_zeitslots=[])
+Resource(id='R123', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R124', hard_skills=['Gleismonteur/in', 'Vorarbeiter/in'], extern=False, frei_zeitslots=[])
+Resource(id='R125', hard_skills=['Vorarbeiter/in'], extern=False, frei_zeitslots=[])
+Resource(id='R126', hard_skills=['Sicherheitschef/in'], extern=False, frei_zeitslots=[])
+Resource(id='R127', hard_skills=['Gleismonteur/in', 'Vorarbeiter/in', 'TFF'], extern=False, frei_zeitslots=[])
+Resource(id='R128', hard_skills=['Gleismonteur/in'], extern=True, frei_zeitslots=[])
+Resource(id='R129', hard_skills=['Gleismonteur/in', 'Sicherheitschef/in'], extern=False, frei_zeitslots=[])
+Resource(id='R130', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R131', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R132', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R133', hard_skills=['Gleismonteur/in', 'Vorarbeiter/in'], extern=False, frei_zeitslots=[])
+Resource(id='R134', hard_skills=['Vorarbeiter/in'], extern=False, frei_zeitslots=[])
+Resource(id='R135', hard_skills=['Gleismonteur/in', 'Vorarbeiter/in'], extern=False, frei_zeitslots=[])
+Resource(id='R136', hard_skills=['Sicherheitschef/in'], extern=False, frei_zeitslots=[])
+Resource(id='R137', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R138', hard_skills=['TFF'], extern=False, frei_zeitslots=[])
+Resource(id='R139', hard_skills=['Gleismonteur/in', 'Vorarbeiter/in'], extern=False, frei_zeitslots=[])
+Resource(id='R140', hard_skills=['TFF'], extern=True, frei_zeitslots=[])
+Resource(id='R141', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R142', hard_skills=['Gleismonteur/in', 'Vorarbeiter/in'], extern=False, frei_zeitslots=[])
+Resource(id='R143', hard_skills=['Gleismonteur/in'], extern=True, frei_zeitslots=[])
+Resource(id='R144', hard_skills=['Gleismonteur/in', 'Sicherheitschef/in'], extern=True, frei_zeitslots=[])
+Resource(id='R145', hard_skills=['Vorarbeiter/in'], extern=False, frei_zeitslots=None)
+Resource(id='R146', hard_skills=['Gleismonteur/in', 'TFF'], extern=False, frei_zeitslots=[])
+Resource(id='R147', hard_skills=['Gleismonteur/in'], extern=False, frei_zeitslots=[])
+Resource(id='R148', hard_skills=['Gleismonteur/in', 'Vorarbeiter/in', 'Sicherheitschef/in'], extern=False, frei_zeitslots=[])
+Resource(id='R149', hard_skills=['Gleismonteur/in', 'Sicherheitschef/in'], extern=False, frei_zeitslots=[])
+Resource(id='R150', hard_skills=['Vorarbeiter/in'], extern=False, frei_zeitslots=[])
+Shifts: Schicht(id='S1', bedarfe={'Gleismonteur/in': 4, 'TFF': 1, 'Vorarbeiter/in': 1}, zeitslot=17, baustelle='B22')
+Schicht(id='S2', bedarfe={'Gleismonteur/in': 6, 'Vorarbeiter/in': 2, 'TFF': 1}, zeitslot=23, baustelle='B16')
+Schicht(id='S3', bedarfe={'Gleismonteur/in': 5, 'Vorarbeiter/in': 2, 'Sicherheitschef/in': 2}, zeitslot=10, baustelle='B17')
+Schicht(id='S4', bedarfe={'Sicherheitschef/in': 1, 'Gleismonteur/in': 4, 'Vorarbeiter/in': 1, 'TFF': 1}, zeitslot=13, baustelle='B8')
+Schicht(id='S5', bedarfe={'Gleismonteur/in': 4, 'Sicherheitschef/in': 2, 'Vorarbeiter/in': 3}, zeitslot=29, baustelle='B22')
+Schicht(id='S6', bedarfe={'Gleismonteur/in': 1, 'Sicherheitschef/in': 1, 'TFF': 1}, zeitslot=21, baustelle='B11')
+Schicht(id='S7', bedarfe={'TFF': 1, 'Vorarbeiter/in': 1}, zeitslot=28, baustelle='B14')
+Schicht(id='S8', bedarfe={'Gleismonteur/in': 9, 'Sicherheitschef/in': 1, 'Vorarbeiter/in': 1}, zeitslot=3, baustelle='B12')
+Schicht(id='S9', bedarfe={'Vorarbeiter/in': 3, 'Gleismonteur/in': 6, 'TFF': 1, 'Sicherheitschef/in': 1}, zeitslot=27, baustelle='B25')
+Schicht(id='S10', bedarfe={'Gleismonteur/in': 7, 'Vorarbeiter/in': 5}, zeitslot=19, baustelle='B5')
+Schicht(id='S11', bedarfe={'Gleismonteur/in': 1, 'Vorarbeiter/in': 1}, zeitslot=29, baustelle='B3')
+Schicht(id='S12', bedarfe={'Gleismonteur/in': 2, 'Vorarbeiter/in': 1}, zeitslot=22, baustelle='B2')
+Schicht(id='S13', bedarfe={'Gleismonteur/in': 4, 'Vorarbeiter/in': 2}, zeitslot=14, baustelle='B15')
+Schicht(id='S14', bedarfe={'Gleismonteur/in': 5, 'Vorarbeiter/in': 1}, zeitslot=22, baustelle='B17')
+Schicht(id='S15', bedarfe={'Gleismonteur/in': 6}, zeitslot=25, baustelle='B5')
+Schicht(id='S16', bedarfe={'Sicherheitschef/in': 4, 'Gleismonteur/in': 3, 'TFF': 1, 'Vorarbeiter/in': 2}, zeitslot=17, baustelle='B8')
+Schicht(id='S17', bedarfe={'Gleismonteur/in': 5, 'TFF': 2, 'Vorarbeiter/in': 1}, zeitslot=22, baustelle='B23')
+Schicht(id='S18', bedarfe={'Gleismonteur/in': 2, 'Vorarbeiter/in': 1}, zeitslot=28, baustelle='B14')
+Schicht(id='S19', bedarfe={'Vorarbeiter/in': 3, 'Gleismonteur/in': 3}, zeitslot=28, baustelle='B13')
+Schicht(id='S20', bedarfe={'Gleismonteur/in': 5, 'TFF': 1, 'Vorarbeiter/in': 1}, zeitslot=30, baustelle='B7')
+Schicht(id='S21', bedarfe={'Gleismonteur/in': 3, 'TFF': 3, 'Vorarbeiter/in': 5, 'Sicherheitschef/in': 1}, zeitslot=25, baustelle='B5')
+Schicht(id='S22', bedarfe={'Gleismonteur/in': 9}, zeitslot=5, baustelle='B11')
+Schicht(id='S23', bedarfe={'Sicherheitschef/in': 4, 'Vorarbeiter/in': 3, 'Gleismonteur/in': 5}, zeitslot=4, baustelle='B10')
+Schicht(id='S24', bedarfe={'TFF': 1, 'Gleismonteur/in': 1, 'Sicherheitschef/in': 2}, zeitslot=17, baustelle='B16')
+Schicht(id='S25', bedarfe={'Vorarbeiter/in': 4, 'Gleismonteur/in': 4, 'TFF': 1, 'Sicherheitschef/in': 1}, zeitslot=4, baustelle='B23')
+Schicht(id='S26', bedarfe={'Vorarbeiter/in': 2}, zeitslot=19, baustelle='B22')
+Schicht(id='S27', bedarfe={'Gleismonteur/in': 3}, zeitslot=11, baustelle='B3')
+Schicht(id='S28', bedarfe={'Sicherheitschef/in': 1, 'Gleismonteur/in': 5, 'Vorarbeiter/in': 3, 'TFF': 2}, zeitslot=29, baustelle='B22')
+Schicht(id='S29', bedarfe={'Sicherheitschef/in': 2, 'Vorarbeiter/in': 4, 'Gleismonteur/in': 1}, zeitslot=22, baustelle='B13')
+Schicht(id='S30', bedarfe={'Gleismonteur/in': 4, 'TFF': 2, 'Vorarbeiter/in': 1}, zeitslot=18, baustelle='B14')
+Schicht(id='S31', bedarfe={'Sicherheitschef/in': 3, 'Gleismonteur/in': 2, 'Vorarbeiter/in': 1}, zeitslot=3, baustelle='B5')
+Schicht(id='S32', bedarfe={'Gleismonteur/in': 7, 'Sicherheitschef/in': 2, 'Vorarbeiter/in': 2}, zeitslot=29, baustelle='B11')
+Schicht(id='S33', bedarfe={'Vorarbeiter/in': 3, 'Gleismonteur/in': 2, 'TFF': 1}, zeitslot=20, baustelle='B15')
+Schicht(id='S34', bedarfe={'TFF': 3, 'Gleismonteur/in': 6, 'Sicherheitschef/in': 2, 'Vorarbeiter/in': 1}, zeitslot=12, baustelle='B7')
+Schicht(id='S35', bedarfe={'Vorarbeiter/in': 1, 'Gleismonteur/in': 2}, zeitslot=17, baustelle='B12')
+Schicht(id='S36', bedarfe={'Gleismonteur/in': 3, 'Sicherheitschef/in': 1}, zeitslot=25, baustelle='B3')
+Schicht(id='S37', bedarfe={'Sicherheitschef/in': 1, 'TFF': 1, 'Gleismonteur/in': 7}, zeitslot=27, baustelle='B8')
+Schicht(id='S38', bedarfe={'Gleismonteur/in': 7, 'Sicherheitschef/in': 3, 'Vorarbeiter/in': 2}, zeitslot=27, baustelle='B4')
+Schicht(id='S39', bedarfe={'Gleismonteur/in': 8, 'Vorarbeiter/in': 2, 'Sicherheitschef/in': 1}, zeitslot=17, baustelle='B5')
+Schicht(id='S40', bedarfe={'Vorarbeiter/in': 4, 'Gleismonteur/in': 6}, zeitslot=21, baustelle='B1')
+Schicht(id='S41', bedarfe={'Vorarbeiter/in': 2, 'Gleismonteur/in': 7, 'Sicherheitschef/in': 1}, zeitslot=18, baustelle='B17')
+Schicht(id='S42', bedarfe={'Vorarbeiter/in': 6, 'Gleismonteur/in': 5, 'Sicherheitschef/in': 1}, zeitslot=23, baustelle='B8')
+Schicht(id='S43', bedarfe={'Gleismonteur/in': 6, 'Vorarbeiter/in': 1, 'Sicherheitschef/in': 2}, zeitslot=3, baustelle='B5')
+Schicht(id='S44', bedarfe={'Gleismonteur/in': 6, 'Vorarbeiter/in': 2, 'Sicherheitschef/in': 3, 'TFF': 1}, zeitslot=26, baustelle='B2')
+Schicht(id='S45', bedarfe={'Gleismonteur/in': 7, 'Vorarbeiter/in': 1, 'TFF': 1}, zeitslot=23, baustelle='B16')
+Schicht(id='S46', bedarfe={'Vorarbeiter/in': 3, 'Gleismonteur/in': 4}, zeitslot=3, baustelle='B4')
+Schicht(id='S47', bedarfe={'Gleismonteur/in': 3, 'TFF': 2, 'Vorarbeiter/in': 2, 'Sicherheitschef/in': 1}, zeitslot=19, baustelle='B12')
+Schicht(id='S48', bedarfe={'Vorarbeiter/in': 2, 'Gleismonteur/in': 8, 'TFF': 1}, zeitslot=5, baustelle='B1')
+Schicht(id='S49', bedarfe={'Vorarbeiter/in': 1, 'Gleismonteur/in': 2}, zeitslot=26, baustelle='B15')
+Schicht(id='S50', bedarfe={'TFF': 1, 'Gleismonteur/in': 3, 'Sicherheitschef/in': 1}, zeitslot=9, baustelle='B21')
+Generated 150 resources, 50 shifts, 4 skills, 19 baustellen.
+Added 30000 variables for resource allocation.
+Added 200 constraints for demand coverage.
+Added 4500 constraints for resource scheduling.
+Added 3300 constraints for shift limits.
+Added 0 constraints for night shift limits.
+Added 4350 constraints for consecutive shifts.
+Added 4650 constraints for change penalties.
+Added 150 variables for total shifts per resource.
+Added 150 constraints for free timeslots.
+Starting to solve. You can abort with Ctrl+C and get the current solution even if not optimal.
+presolving:
+(round 1, fast)       0 del vars, 1936 del conss, 0 add conss, 151 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 6000 clqs
+(round 2, exhaustive) 0 del vars, 3136 del conss, 0 add conss, 152 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 6000 clqs
+(round 3, exhaustive) 0 del vars, 3136 del conss, 0 add conss, 152 chg bounds, 0 chg sides, 0 chg coeffs, 17538 upgd conss, 0 impls, 6000 clqs
+(round 4, medium)     0 del vars, 9136 del conss, 5250 add conss, 152 chg bounds, 5250 chg sides, 67200 chg coeffs, 17538 upgd conss, 0 impls, 6000 clqs
+(round 5, exhaustive) 20478 del vars, 9136 del conss, 5250 add conss, 152 chg bounds, 5250 chg sides, 68700 chg coeffs, 17538 upgd conss, 0 impls, 5057 clqs
+(round 6, fast)       20478 del vars, 17044 del conss, 12215 add conss, 302 chg bounds, 5250 chg sides, 68700 chg coeffs, 17538 upgd conss, 0 impls, 5057 clqs
+(round 7, exhaustive) 20738 del vars, 17044 del conss, 12215 add conss, 304 chg bounds, 5250 chg sides, 70228 chg coeffs, 17538 upgd conss, 0 impls, 5057 clqs
+(round 8, fast)       20738 del vars, 17678 del conss, 12849 add conss, 331 chg bounds, 5250 chg sides, 70332 chg coeffs, 17538 upgd conss, 0 impls, 6478 clqs
+   (0.8s) probing: 51/13912 (0.4%) - 0 fixings, 0 aggregations, 0 implications, 0 bound changes
+   (0.8s) probing aborted: 50/50 successive totally useless probings
+   (0.8s) symmetry computation started: requiring (bin +, int +, cont +), (fixed: bin -, int -, cont -)
+   (1.1s) symmetry computation finished: 133 generators found (max: 1500, log10 of symmetry group size: 120.0) (symcode time: 0.30)
+dynamic symmetry handling statistics:
+   orbitopal reduction:       11 components: 122x22, 82x44, 82x8, 82x4, 103x5, 82x13, 82x8, 148x4, 108x8, 82x17, 82x7
+   orbital reduction:         no components
+   lexicographic reduction:    4 permutations with support sizes 206, 164, 216, 288
+handled 15 out of 15 symmetry components
+presolving (9 rounds: 9 fast, 6 medium, 5 exhaustive):
+ 20738 deleted vars, 17678 deleted constraints, 12849 added constraints, 331 tightened bounds, 0 added holes, 5250 changed sides, 70412 changed coefficients
+ 0 implications, 6478 cliques
+presolved problem has 14064 variables (13912 bin, 152 int, 0 impl, 0 cont) and 15995 constraints
+    300 constraints of type <varbound>
+   2838 constraints of type <knapsack>
+   5560 constraints of type <setppc>
+    150 constraints of type <linear>
+   7147 constraints of type <logicor>
+transformed objective value is always integral (scale: 1)
+Presolving Time: 1.09
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+  5.8s|     1 |     0 | 15382 |     - |   505M |   0 |  14k|  16k|  15k|   0 |  0 | 249 |   0 | 1.132250e+03 |      --      |    Inf | unknown
+o 7.4s|     1 |     0 | 27514 |     - |feaspump|   0 |  14k|  16k|  15k|   0 |  0 | 249 |   0 | 1.132250e+03 | 1.755000e+03 |  55.00%| unknown
+  8.6s|     1 |     0 | 29805 |     - |   518M |   0 |  14k|  16k|  16k|  67 |  1 | 249 |   0 | 1.144104e+03 | 1.755000e+03 |  53.40%| unknown
+i 8.6s|     1 |     0 | 29805 |     - |  oneopt|   0 |  14k|  16k|  16k|  67 |  1 | 249 |   0 | 1.144104e+03 | 1.705000e+03 |  49.02%| unknown
+ 10.1s|     1 |     0 | 33146 |     - |   519M |   0 |  14k|  16k|  16k| 129 |  2 | 249 |   0 | 1.160604e+03 | 1.705000e+03 |  46.91%| unknown
+ 11.0s|     1 |     0 | 34835 |     - |   521M |   0 |  14k|  16k|  16k| 190 |  3 | 249 |   0 | 1.176250e+03 | 1.705000e+03 |  44.95%| unknown
+ 12.2s|     1 |     0 | 37426 |     - |   524M |   0 |  14k|  16k|  16k| 245 |  4 | 249 |   0 | 1.199389e+03 | 1.705000e+03 |  42.16%| unknown
+ 14.8s|     1 |     0 | 44557 |     - |   526M |   0 |  14k|  16k|  16k| 308 |  5 | 250 |   0 | 1.232833e+03 | 1.705000e+03 |  38.30%| unknown
+ 17.0s|     1 |     0 | 49914 |     - |   529M |   0 |  14k|  16k|  16k| 363 |  6 | 250 |   0 | 1.266654e+03 | 1.705000e+03 |  34.61%| unknown
+ 18.4s|     1 |     0 | 52678 |     - |   531M |   0 |  14k|  16k|  16k| 412 |  7 | 251 |   0 | 1.323558e+03 | 1.705000e+03 |  28.82%| unknown
+ 20.0s|     1 |     0 | 55591 |     - |   532M |   0 |  14k|  16k|  16k| 446 |  8 | 251 |   0 | 1.380038e+03 | 1.705000e+03 |  23.55%| unknown
+ 20.9s|     1 |     0 | 56886 |     - |   535M |   0 |  14k|  16k|  16k| 470 |  9 | 251 |   0 | 1.382750e+03 | 1.705000e+03 |  23.31%| unknown
+ 21.4s|     1 |     0 | 57256 |     - |   538M |   0 |  14k|  16k|  16k| 495 | 10 | 251 |   0 | 1.382750e+03 | 1.705000e+03 |  23.31%| unknown
+ 21.8s|     1 |     0 | 58097 |     - |   540M |   0 |  14k|  16k|  16k| 515 | 11 | 251 |   0 | 1.383069e+03 | 1.705000e+03 |  23.28%| unknown
+ 22.1s|     1 |     0 | 58556 |     - |   541M |   0 |  14k|  16k|  16k| 532 | 12 | 251 |   0 | 1.383278e+03 | 1.705000e+03 |  23.26%| unknown
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+ 22.5s|     1 |     0 | 59204 |     - |   543M |   0 |  14k|  16k|  16k| 549 | 13 | 251 |   0 | 1.385917e+03 | 1.705000e+03 |  23.02%| unknown
+ 23.0s|     1 |     0 | 60132 |     - |   544M |   0 |  14k|  16k|  16k| 567 | 14 | 251 |   0 | 1.385917e+03 | 1.705000e+03 |  23.02%| unknown
+ 23.4s|     1 |     0 | 60947 |     - |   546M |   0 |  14k|  16k|  16k| 590 | 15 | 251 |   0 | 1.417500e+03 | 1.705000e+03 |  20.28%| unknown
+ 23.8s|     1 |     0 | 61566 |     - |   548M |   0 |  14k|  16k|  16k| 609 | 16 | 251 |   0 | 1.422500e+03 | 1.705000e+03 |  19.86%| unknown
+ 24.0s|     1 |     0 | 62027 |     - |   549M |   0 |  14k|  16k|  16k| 625 | 17 | 251 |   0 | 1.428000e+03 | 1.705000e+03 |  19.40%| unknown
+ 24.6s|     1 |     0 | 63234 |     - |   551M |   0 |  14k|  16k|  16k| 637 | 18 | 251 |   0 | 1.440538e+03 | 1.705000e+03 |  18.36%| unknown
+ 25.1s|     1 |     0 | 64361 |     - |   553M |   0 |  14k|  16k|  16k| 651 | 19 | 251 |   0 | 1.440538e+03 | 1.705000e+03 |  18.36%| unknown
+ 25.9s|     1 |     0 | 66071 |     - |   554M |   0 |  14k|  16k|  16k| 664 | 20 | 251 |   0 | 1.441231e+03 | 1.705000e+03 |  18.30%| unknown
+ 26.4s|     1 |     0 | 67142 |     - |   554M |   0 |  14k|  16k|  16k| 672 | 21 | 251 |   0 | 1.447760e+03 | 1.705000e+03 |  17.77%| unknown
+ 26.6s|     1 |     0 | 67427 |     - |   554M |   0 |  14k|  16k|  16k| 678 | 22 | 251 |   0 | 1.458344e+03 | 1.705000e+03 |  16.91%| unknown
+ 26.9s|     1 |     0 | 68015 |     - |   554M |   0 |  14k|  16k|  16k| 686 | 23 | 251 |   0 | 1.464750e+03 | 1.705000e+03 |  16.40%| unknown
+ 27.1s|     1 |     0 | 68281 |     - |   554M |   0 |  14k|  16k|  16k| 692 | 24 | 251 |   0 | 1.467083e+03 | 1.705000e+03 |  16.22%| unknown
+ 27.6s|     1 |     0 | 69293 |     - |   554M |   0 |  14k|  16k|  16k| 700 | 25 | 251 |   0 | 1.473396e+03 | 1.705000e+03 |  15.72%| unknown
+ 27.8s|     1 |     0 | 69567 |     - |   554M |   0 |  14k|  16k|  16k| 707 | 26 | 251 |   0 | 1.474750e+03 | 1.705000e+03 |  15.61%| unknown
+ 28.0s|     1 |     0 | 69881 |     - |   554M |   0 |  14k|  16k|  16k| 711 | 27 | 251 |   0 | 1.479042e+03 | 1.705000e+03 |  15.28%| unknown
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+ 28.1s|     1 |     0 | 70013 |     - |   554M |   0 |  14k|  16k|  16k| 713 | 28 | 251 |   0 | 1.481542e+03 | 1.705000e+03 |  15.08%| unknown
+ 28.2s|     1 |     0 | 70014 |     - |   554M |   0 |  14k|  16k|  16k| 714 | 29 | 251 |   0 | 1.481542e+03 | 1.705000e+03 |  15.08%| unknown
+^Cpressed CTRL-C 1 times (5 times for forcing termination)
+ 65.8s|     1 |     2 |169550 |     - |   555M |   0 |  14k|  16k|  16k| 714 | 30 | 251 |   0 | 1.481542e+03 | 1.705000e+03 |  15.08%| unknown
+
+SCIP Status        : solving was interrupted [user interrupt]
+Solving Time (sec) : 65.76
+Solving Nodes      : 1
+Primal Bound       : +1.70500000000000e+03 (2 solutions)
+Dual Bound         : +1.48154166666667e+03
+Gap                : 15.08 %
+Timeslot Day 2, Shift S31 (Baustelle: B5):
+  Resource R20 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R26 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R53 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R79 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R116 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R150 assigned for Bedarf/Role 'Vorarbeiter/in'
+Timeslot Day 2, Shift S43 (Baustelle: B5):
+  Resource R2 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R40 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R51 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R77 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R86 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R95 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R124 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R129 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R146 assigned for Bedarf/Role 'Gleismonteur/in'
+Timeslot Day 2, Shift S46 (Baustelle: B4):
+  Resource R1 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R4 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R70 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R78 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R84 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R88 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R89 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R110 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R115 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R123 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R126 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R134 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R147 assigned for Bedarf/Role 'Gleismonteur/in'
+Timeslot Day 2, Shift S8 (Baustelle: B12):
+  Resource R5 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R6 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R30 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R59 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R64 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R65 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R82 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R83 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R96 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R107 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R111 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R132 assigned for Bedarf/Role 'Gleismonteur/in'
+Timeslot Night 2, Shift S23 (Baustelle: B10):
+  Resource R29 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R32 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R36 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R45 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R56 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R68 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R90 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R97 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R109 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R136 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R137 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R145 assigned for Bedarf/Role 'Vorarbeiter/in'
+Timeslot Night 2, Shift S25 (Baustelle: B23):
+  Resource R3 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R13 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R14 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R22 assigned for Bedarf/Role 'TFF'
+  Resource R31 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R37 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R44 assigned for Bedarf/Role 'TFF'
+  Resource R46 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R47 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R73 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R81 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R99 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R141 assigned for Bedarf/Role 'Gleismonteur/in'
+Timeslot Day 3, Shift S22 (Baustelle: B11):
+  Resource R5 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R8 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R17 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R21 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R64 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R70 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R84 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R91 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R96 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R108 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R120 assigned for Bedarf/Role 'Gleismonteur/in'
+Timeslot Day 3, Shift S48 (Baustelle: B1):
+  Resource R1 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R4 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R10 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R12 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R48 assigned for Bedarf/Role 'TFF'
+  Resource R88 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R94 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R104 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R113 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R116 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R130 assigned for Bedarf/Role 'Gleismonteur/in'
+Timeslot Day 5, Shift S50 (Baustelle: B21):
+  Resource R89 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R104 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R120 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R130 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R138 assigned for Bedarf/Role 'TFF'
+Timeslot Night 5, Shift S3 (Baustelle: B17):
+  Resource R15 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R25 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R29 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R39 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R92 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R115 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R123 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R126 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R145 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R149 assigned for Bedarf/Role 'Sicherheitschef/in'
+Timeslot Day 6, Shift S27 (Baustelle: B3):
+  Resource R42 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R83 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R89 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R104 assigned for Bedarf/Role 'Gleismonteur/in'
+Timeslot Night 6, Shift S34 (Baustelle: B7):
+  Resource R14 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R22 assigned for Bedarf/Role 'TFF'
+  Resource R56 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R73 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R82 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R90 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R107 assigned for Bedarf/Role 'TFF'
+  Resource R110 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R111 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R126 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R131 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R137 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R138 assigned for Bedarf/Role 'TFF'
+Timeslot Day 7, Shift S4 (Baustelle: B8):
+  Resource R8 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R10 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R12 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R19 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R21 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R50 assigned for Bedarf/Role 'TFF'
+  Resource R53 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R55 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R98 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R109 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R113 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R125 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R148 assigned for Bedarf/Role 'Sicherheitschef/in'
+Timeslot Night 7, Shift S13 (Baustelle: B15):
+  Resource R44 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R47 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R81 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R87 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R92 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R99 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R141 assigned for Bedarf/Role 'Gleismonteur/in'
+Timeslot Day 9, Shift S1 (Baustelle: B22):
+  Resource R1 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R26 assigned for Bedarf/Role 'TFF'
+  Resource R36 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R46 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R59 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R97 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R147 assigned for Bedarf/Role 'Gleismonteur/in'
+Timeslot Day 9, Shift S16 (Baustelle: B8):
+  Resource R8 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R10 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R12 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R19 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R21 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R50 assigned for Bedarf/Role 'TFF'
+  Resource R53 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R55 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R98 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R109 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R113 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R125 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R148 assigned for Bedarf/Role 'Sicherheitschef/in'
+Timeslot Day 9, Shift S24 (Baustelle: B16):
+  Resource R4 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R43 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R48 assigned for Bedarf/Role 'TFF'
+  Resource R57 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R79 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R90 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R130 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R134 assigned for Bedarf/Role 'Vorarbeiter/in'
+Timeslot Day 9, Shift S35 (Baustelle: B12):
+  Resource R5 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R6 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R30 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R64 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R65 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R82 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R83 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R96 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R107 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R111 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R132 assigned for Bedarf/Role 'Gleismonteur/in'
+Timeslot Day 9, Shift S39 (Baustelle: B5):
+  Resource R2 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R13 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R40 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R51 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R77 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R86 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R95 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R116 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R124 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R129 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R146 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R150 assigned for Bedarf/Role 'Vorarbeiter/in'
+Timeslot Night 9, Shift S30 (Baustelle: B14):
+  Resource R22 assigned for Bedarf/Role 'TFF'
+  Resource R44 assigned for Bedarf/Role 'TFF'
+  Resource R47 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R67 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R68 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R94 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R141 assigned for Bedarf/Role 'Gleismonteur/in'
+Timeslot Night 9, Shift S41 (Baustelle: B17):
+  Resource R15 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R25 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R29 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R39 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R92 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R115 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R123 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R126 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R145 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R149 assigned for Bedarf/Role 'Gleismonteur/in'
+Timeslot Day 10, Shift S10 (Baustelle: B5):
+  Resource R2 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R13 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R20 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R40 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R51 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R53 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R77 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R86 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R95 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R116 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R129 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R146 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R150 assigned for Bedarf/Role 'Vorarbeiter/in'
+Timeslot Day 10, Shift S26 (Baustelle: B22):
+  Resource R1 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R26 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R36 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R59 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R97 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R134 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R147 assigned for Bedarf/Role 'Gleismonteur/in'
+Timeslot Day 10, Shift S47 (Baustelle: B12):
+  Resource R5 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R6 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R30 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R64 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R65 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R82 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R83 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R96 assigned for Bedarf/Role 'TFF'
+  Resource R107 assigned for Bedarf/Role 'TFF'
+  Resource R111 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R132 assigned for Bedarf/Role 'Gleismonteur/in'
+Timeslot Night 10, Shift S33 (Baustelle: B15):
+  Resource R44 assigned for Bedarf/Role 'TFF'
+  Resource R47 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R81 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R87 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R92 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R99 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R141 assigned for Bedarf/Role 'Gleismonteur/in'
+Timeslot Day 11, Shift S40 (Baustelle: B1):
+  Resource R1 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R4 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R10 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R12 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R48 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R88 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R94 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R104 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R113 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R116 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R130 assigned for Bedarf/Role 'Gleismonteur/in'
+Timeslot Day 11, Shift S6 (Baustelle: B11):
+  Resource R5 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R8 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R17 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R21 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R64 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R70 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R84 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R91 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R96 assigned for Bedarf/Role 'TFF'
+  Resource R108 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R120 assigned for Bedarf/Role 'Gleismonteur/in'
+Timeslot Night 11, Shift S12 (Baustelle: B2):
+  Resource R6 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R32 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R36 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R59 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R65 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R66 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R68 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R97 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R132 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R136 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R137 assigned for Bedarf/Role 'Gleismonteur/in'
+Timeslot Night 11, Shift S14 (Baustelle: B17):
+  Resource R15 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R25 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R29 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R39 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R92 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R115 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R123 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R126 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R145 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R149 assigned for Bedarf/Role 'Gleismonteur/in'
+Timeslot Night 11, Shift S17 (Baustelle: B23):
+  Resource R3 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R13 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R14 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R22 assigned for Bedarf/Role 'TFF'
+  Resource R31 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R37 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R44 assigned for Bedarf/Role 'TFF'
+  Resource R46 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R47 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R73 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R81 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R99 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R141 assigned for Bedarf/Role 'Gleismonteur/in'
+Timeslot Night 11, Shift S29 (Baustelle: B13):
+  Resource R20 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R40 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R45 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R87 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R95 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R110 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R150 assigned for Bedarf/Role 'Vorarbeiter/in'
+Timeslot Day 12, Shift S2 (Baustelle: B16):
+  Resource R4 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R43 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R48 assigned for Bedarf/Role 'TFF'
+  Resource R57 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R79 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R86 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R90 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R130 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R134 assigned for Bedarf/Role 'Vorarbeiter/in'
+Timeslot Day 12, Shift S42 (Baustelle: B8):
+  Resource R8 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R10 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R12 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R19 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R21 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R50 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R53 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R55 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R98 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R109 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R113 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R125 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R148 assigned for Bedarf/Role 'Vorarbeiter/in'
+Timeslot Day 12, Shift S45 (Baustelle: B16):
+  Resource R5 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R30 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R42 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R78 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R88 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R91 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R129 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R131 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R146 assigned for Bedarf/Role 'TFF'
+Timeslot Day 13, Shift S15 (Baustelle: B5):
+  Resource R2 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R20 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R26 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R40 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R51 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R77 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R116 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R129 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R150 assigned for Bedarf/Role 'TFF'
+Timeslot Day 13, Shift S21 (Baustelle: B5):
+  Resource R13 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R37 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R53 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R56 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R73 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R78 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R86 assigned for Bedarf/Role 'TFF'
+  Resource R95 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R96 assigned for Bedarf/Role 'TFF'
+  Resource R124 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R145 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R146 assigned for Bedarf/Role 'TFF'
+Timeslot Day 13, Shift S36 (Baustelle: B3):
+  Resource R42 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R83 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R89 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R104 assigned for Bedarf/Role 'Gleismonteur/in'
+Timeslot Night 13, Shift S44 (Baustelle: B2):
+  Resource R6 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R31 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R32 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R36 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R59 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R65 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R66 assigned for Bedarf/Role 'TFF'
+  Resource R68 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R97 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R132 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R136 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R137 assigned for Bedarf/Role 'Gleismonteur/in'
+Timeslot Night 13, Shift S49 (Baustelle: B15):
+  Resource R44 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R47 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R81 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R87 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R92 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R99 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R141 assigned for Bedarf/Role 'Gleismonteur/in'
+Timeslot Day 14, Shift S37 (Baustelle: B8):
+  Resource R8 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R10 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R12 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R19 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R21 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R50 assigned for Bedarf/Role 'TFF'
+  Resource R53 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R55 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R98 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R109 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R113 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R125 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R148 assigned for Bedarf/Role 'Gleismonteur/in'
+Timeslot Day 14, Shift S38 (Baustelle: B4):
+  Resource R1 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R4 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R70 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R78 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R84 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R88 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R89 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R110 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R115 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R123 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R126 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R134 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R147 assigned for Bedarf/Role 'Gleismonteur/in'
+Timeslot Day 14, Shift S9 (Baustelle: B25):
+  Resource R3 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R13 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R14 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R15 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R17 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R25 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R37 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R48 assigned for Bedarf/Role 'TFF'
+  Resource R56 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R111 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R116 assigned for Bedarf/Role 'Gleismonteur/in'
+Timeslot Night 14, Shift S18 (Baustelle: B14):
+  Resource R47 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R124 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R137 assigned for Bedarf/Role 'Gleismonteur/in'
+Timeslot Night 14, Shift S19 (Baustelle: B13):
+  Resource R20 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R40 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R45 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R87 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R95 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R150 assigned for Bedarf/Role 'Vorarbeiter/in'
+Timeslot Night 14, Shift S7 (Baustelle: B14):
+  Resource R44 assigned for Bedarf/Role 'TFF'
+  Resource R94 assigned for Bedarf/Role 'Vorarbeiter/in'
+Timeslot Day 15, Shift S11 (Baustelle: B3):
+  Resource R42 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R83 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R89 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R104 assigned for Bedarf/Role 'Gleismonteur/in'
+Timeslot Day 15, Shift S28 (Baustelle: B22):
+  Resource R31 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R32 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R43 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R46 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R48 assigned for Bedarf/Role 'TFF'
+  Resource R57 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R62 assigned for Bedarf/Role 'TFF'
+  Resource R68 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R115 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R145 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R146 assigned for Bedarf/Role 'Gleismonteur/in'
+Timeslot Day 15, Shift S32 (Baustelle: B11):
+  Resource R5 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R8 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R17 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R19 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R21 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R64 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R70 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R84 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R91 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R96 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R108 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R120 assigned for Bedarf/Role 'Gleismonteur/in'
+Timeslot Day 15, Shift S5 (Baustelle: B22):
+  Resource R1 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R26 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R36 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R59 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R88 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R97 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R134 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R136 assigned for Bedarf/Role 'Sicherheitschef/in'
+  Resource R147 assigned for Bedarf/Role 'Gleismonteur/in'
+Timeslot Night 15, Shift S20 (Baustelle: B7):
+  Resource R14 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R22 assigned for Bedarf/Role 'TFF'
+  Resource R56 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R73 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R82 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R90 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R107 assigned for Bedarf/Role 'TFF'
+  Resource R110 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R111 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R126 assigned for Bedarf/Role 'Vorarbeiter/in'
+  Resource R131 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R137 assigned for Bedarf/Role 'Gleismonteur/in'
+  Resource R138 assigned for Bedarf/Role 'TFF'

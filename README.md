@@ -22,13 +22,20 @@ Install dependencies:
 uv sync
 ```
 
-Optionally, install Hurl to run API tests: https://hurl.dev/docs/installation.html
-
 ## Running
+
+**Small example:**
 
 ```shell
 uv run src/dispatch_small.py
 ```
+
+**Bigger two week example:**
+
+```shell
+uv run src/dispatch_two_weeks.py
+```
+(You can abort after about 2 minutes and get a good but not quite optimal solution.)
 
 ## License
 
