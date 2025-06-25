@@ -48,18 +48,25 @@ def solve_dispatch(
                     vtype="BINARY", name=f"x_{r.id}_{s.id}_{b}", obj=r.kosten()
                 )
 
-    # variables for penalties if shifts of BSA are not stable i.e. different resources in different shifts of same BSA
-    y = {}
-    for b in baustellen:
-        y[b] = model.addVar(vtype="INTEGER", name=f"y_{b}", obj=1)
+    print(f"Added {len(x)} variables for resource allocation.")
+
+    # # variables for penalties if shifts of BSA are not stable i.e. different resources in different shifts of same BSA
+    # y = {}
+    # for b in baustellen:
+    #     y[b] = model.addVar(vtype="INTEGER", name=f"y_{b}", obj=1)
 
     for s in schichten:
         for b in bedarfe:
+            if b not in s.bedarfe:
+                # If the shift does not require this bedarf, we can skip it
+                continue
             # ensure that each demand is covered by exactly one resource in each shift
             model.addCons(
                 quicksum(x[(r.id, s.id, b)] * r.deckt_bedarf(b) for r in resourcen)
                 >= s.bedarfe[b]
             )
+
+    print(f"Added {len(schichten) * len(bedarfe)} constraints for demand coverage.")
 
     # Ensure that each resource is only scheduled to one shift and one bedarf across all timeslots
     for r in resourcen:
@@ -72,6 +79,8 @@ def solve_dispatch(
                 )
                 <= 1
             )
+
+    print(f"Added {len(resourcen) * timeslots} constraints for resource scheduling.")
 
     # Ensure that each baustelle has a stable shift, i.e., the same resource is assigned across all shifts
     # TODO correct?
@@ -103,6 +112,8 @@ def solve_dispatch(
                 <= 7
             )
     
+    print(f"Added {len(resourcen) * (timeslots - 8)} constraints for shift limits.")
+    
     # Do at most 14 night shifts in any 30 day timeslot window
     for r in resourcen:
         for start_t in range(
@@ -119,18 +130,18 @@ def solve_dispatch(
                 <= 14
             )
 
+    print(f"Added {len(resourcen) * (timeslots - 30)} constraints for night shift limits.")
+
     # Ensure that no resource is assigned to shifts in consecutive timeslots i.e. do not work too munch
     for r in resourcen:
         for t in range(1, timeslots):
             shifts_t = shifts_by_timeslot(schichten, t)
             shifts_next = shifts_by_timeslot(schichten, t + 1)
-            for s1 in shifts_t:
-                for s2 in shifts_next:
-                    for b1 in bedarfe:
-                        for b2 in bedarfe:
-                            model.addCons(
-                                x[(r.id, s1.id, b1)] + x[(r.id, s2.id, b2)] <= 1
-                            )
+            model.addCons(
+                quicksum(x[(r.id, s1.id, b1)] for b1 in bedarfe for s1 in shifts_t) + quicksum(x[(r.id, s2.id, b2)] for b2 in bedarfe for s2 in shifts_next) <= 1
+            )
+
+    print(f"Added {len(resourcen) * (timeslots - 1)} constraints for consecutive shifts.")
 
     # punish if resource assignment changing for a following shift of a BSA
 
@@ -142,12 +153,12 @@ def solve_dispatch(
             s1 = bsa_shifts[i]
             s2 = bsa_shifts[i + 1]
             for r in resourcen:
-                for b in bedarfe:
-                    vname = f"change_{bsa}_{s1.id}_{s2.id}_{r.id}_{b}"
-                    change_var = model.addVar(vtype="BINARY", name=vname, obj=10)
-                    change_penalties[(bsa, s1.id, s2.id, r.id, b)] = change_var
-                    model.addCons(x[(r.id, s1.id, b)] - x[(r.id, s2.id, b)] <= change_var)
-                    model.addCons(x[(r.id, s2.id, b)] - x[(r.id, s1.id, b)] <= change_var)
+                # for b in bedarfe:
+                vname = f"change_{bsa}_{s1.id}_{s2.id}_{r.id}_{b}"
+                change_var = model.addVar(vtype="BINARY", name=vname, obj=10)
+                change_penalties[(bsa, s1.id, s2.id, r.id, b)] = change_var
+                model.addCons(quicksum(x[(r.id, s1.id, b)] for b in bedarfe) - quicksum(x[(r.id, s2.id, b)] for b in bedarfe) <= change_var)
+                model.addCons(quicksum(x[(r.id, s2.id, b)] for b in bedarfe) - quicksum(x[(r.id, s1.id, b)] for b in bedarfe) <= change_var)
 
     for bsa in baustellen:
         bsa_shifts_day = sorted(
@@ -161,6 +172,8 @@ def solve_dispatch(
         add_change_penalties(bsa_shifts_day)
         add_change_penalties(bsa_shifts_night)
 
+    print(f"Added {len(change_penalties)} constraints for change penalties.")
+
     # Add constraints so that resources work equally many shifts across all baustellen
     # Introduce variables for the total number of shifts assigned to each resource
     total_shifts = {}
@@ -172,6 +185,8 @@ def solve_dispatch(
             total_shifts[r.id]
             == quicksum(x[(r.id, s.id, b)] for s in schichten for b in bedarfe)
         )
+    
+    print(f"Added {len(resourcen)} variables for total shifts per resource.")
 
     # Introduce variables for the minimum and maximum number of shifts assigned to any resource
     min_shifts = model.addVar(vtype="INTEGER", name="min_shifts")
@@ -191,10 +206,13 @@ def solve_dispatch(
     # Add constraints to not schedule shifts if resource has frei_zeitslot in shift zeitslot
     for r in resourcen:
         if r.frei_zeitslots is not None:
-            for s in schichten:
-                if s.zeitslot in r.frei_zeitslots:
-                    for b in bedarfe:
-                        model.addCons(x[(r.id, s.id, b)] == 0)
+            model.addCons(quicksum(x[(r.id, s.id, b)] for s in schichten for b in bedarfe if s.zeitslot in r.frei_zeitslots) <= 0)
+            # for s in schichten:
+            #     if s.zeitslot in r.frei_zeitslots:
+            #         for b in bedarfe:
+            #             model.addCons(x[(r.id, s.id, b)] == 0)
+
+    print(f"Added {len(resourcen)} constraints for free timeslots.")
 
     # Optionally, if you want to ensure that a resource is not assigned to overlapping timeslots,
     # you can group by timeslot as well:
