@@ -50,7 +50,7 @@ for i in range(num_resources):
         frei_zeitslots = None  # Some resources always available
     resources.append(
         Resource(
-            id=f"R{i+1}",
+            id=f"R{i + 1}",
             hard_skills=list(skills),
             extern=extern,
             frei_zeitslots=frei_zeitslots,
@@ -58,7 +58,7 @@ for i in range(num_resources):
     )
 
 # Create baustellen
-baustellen = [f"B{i+1}" for i in range(num_baustellen)]
+baustellen = [f"B{i + 1}" for i in range(num_baustellen)]
 
 # Assign baustellen to night-only or 24/7
 baustelle_modes = {}
@@ -86,7 +86,7 @@ for i in range(num_shifts):
         bedarfe[skill] = bedarfe.get(skill, 0) + 1
     shifts.append(
         Schicht(
-            id=f"S{i+1}",
+            id=f"S{i + 1}",
             bedarfe=bedarfe,
             zeitslot=zeitslot,
             baustelle=baustelle,
@@ -99,6 +99,8 @@ all_baustellen = sorted({schicht.baustelle for schicht in shifts})
 
 print(f"Resources: {'\n'.join([str(r) for r in resources])}")
 print(f"Shifts: {'\n'.join([str(s) for s in shifts])}")
-print(f"Generated {len(resources)} resources, {len(shifts)} shifts, {len(all_bedarfe)} skills, {len(all_baustellen)} baustellen.")
+print(
+    f"Generated {len(resources)} resources, {len(shifts)} shifts, {len(all_bedarfe)} skills, {len(all_baustellen)} baustellen."
+)
 
 solve_dispatch(resources, shifts, all_bedarfe, all_baustellen, num_timeslots)

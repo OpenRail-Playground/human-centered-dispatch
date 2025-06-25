@@ -17,9 +17,14 @@ schichten = [
     )
     for zeitslot in range(2, 56, 2)
 ] + [
-    Schicht(id=f"ID31", bedarfe={"TFF": 1}, zeitslot=1, baustelle="Zürich",),
+    Schicht(
+        id=f"ID31",
+        bedarfe={"TFF": 1},
+        zeitslot=1,
+        baustelle="Zürich",
+    ),
     Schicht(id=f"ID32", bedarfe={"TFF": 1}, zeitslot=3, baustelle="Zürich"),
-    Schicht(id=f"ID33", bedarfe={"TFF": 1}, zeitslot=5, baustelle="Zürich")
+    Schicht(id=f"ID33", bedarfe={"TFF": 1}, zeitslot=5, baustelle="Zürich"),
 ]
 
 bedarfe = sorted({skill for schicht in schichten for skill in schicht.bedarfe})

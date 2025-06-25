@@ -37,6 +37,8 @@ uv run src/dispatch_two_weeks.py
 ```
 (You can abort after about 2 minutes and get a good but not quite optimal solution.)
 
+Here is an example output: [example_run_two_weeks.txt](./example_run_two_weeks.txt)
+
 ## License
 
 <!-- If you decide for another license, please change it here, and exchange the LICENSE file -->
