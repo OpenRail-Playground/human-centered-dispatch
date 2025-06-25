@@ -1,0 +1,87 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+
+\title{Resource Allocation}
+\author{Steffan Schlein}
+\date{June 2025}
+
+\begin{document}
+
+\section*{MIP Formulation for Human-Centered Dispatch}
+
+\textbf{Sets:}
+\begin{itemize}
+    \item $R$ : Set of resources (indexed by $r$)
+    \item $S$ : Set of shifts (indexed by $s$)
+    \item $B$ : Set of demand types/roles (indexed by $b$)
+    \item $P$ : Set of construction sites (baustellen, indexed by $p$)
+    \item $T$ : Set of timeslots (indexed by $t$)
+\end{itemize}
+
+\textbf{Parameters:}
+\begin{itemize}
+    \item $d_{s,b}$ : Number of resources required for demand $b$ in shift $s$
+    \item $z_s$ : Timeslot of shift $s$
+    \item $p_s$ : Baustelle of shift $s$
+    \item $c_r$ : Cost of assigning resource $r$ (higher for externals)
+    \item $a_{r,b}$ : 1 if resource $r$ can cover demand $b$, 0 otherwise
+\end{itemize}
+
+\textbf{Decision Variables:}
+\begin{align*}
+    x_{r,s,b} &=
+    \begin{cases}
+        1 & \text{if resource $r$ is assigned to shift $s$ for demand $b$} \\
+        0 & \text{otherwise}
+    \end{cases} \\
+    y_p &\in \mathbb{Z}_{\geq 0} \quad \text{(penalty for instability at baustelle $p$)} \\
+    \text{change}_{p,s_1,s_2,r,b} &\in \{0,1\} \quad \text{(penalty if assignment changes between consecutive shifts $s_1,s_2$ at $p$)} \\
+    \text{total\_shifts}_r &\in \mathbb{Z}_{\geq 0} \quad \text{(total shifts assigned to $r$)} \\
+    \text{min\_shifts}, \text{max\_shifts} &\in \mathbb{Z}_{\geq 0}
+\end{align*}
+
+\textbf{Objective:}
+\begin{align*}
+    \min \quad & \sum_{r \in R} \sum_{s \in S} \sum_{b \in B} c_r x_{r,s,b}
+    + \sum_{p \in P} y_p
+    + \sum_{p \in P} \sum_{(s_1,s_2) \in \text{consec}(p)} \sum_{r \in R} \sum_{b \in B} 10 \cdot \text{change}_{p,s_1,s_2,r,b} \\
+    &+ 5 \cdot (\text{max\_shifts} - \text{min\_shifts})
+\end{align*}
+
+\textbf{Constraints:}
+\begin{enumerate}
+    \item \textbf{Demand coverage:}
+    \[
+        \sum_{r \in R} x_{r,s,b} \cdot a_{r,b} \geq d_{s,b} \qquad \forall s \in S,\, b \in B
+    \]
+    \item \textbf{Resource assignment per timeslot:}
+    \[
+        \sum_{s \in S: z_s = t} \sum_{b \in B} x_{r,s,b} \leq 1 \qquad \forall r \in R,\, t \in T
+    \]
+    \item \textbf{Max 7 shifts in any 9-day window:}
+    \[
+        \sum_{s \in S: z_s \in [t, t+17]} \sum_{b \in B} x_{r,s,b} \leq 7 \qquad \forall r \in R,\, t \in T,\, t \text{ odd}
+    \]
+    \item \textbf{Max 14 night shifts in any 30-day window:}
+    \[
+        \sum_{s \in S: z_s \in [t, t+59],\, z_s \text{ even}} \sum_{b \in B} x_{r,s,b} \leq 14 \qquad \forall r \in R,\, t \in T,\, t \text{ odd}
+    \]
+    \item \textbf{No consecutive timeslot assignments:}
+    \[
+        x_{r,s_1,b_1} + x_{r,s_2,b_2} \leq 1
+    \]
+    for all $r \in R$, $t \in T$, $s_1 \in S: z_{s_1}=t$, $s_2 \in S: z_{s_2}=t+1$, $b_1, b_2 \in B$
+    \item \textbf{Penalty for assignment changes (stability):}
+    \[
+        |x_{r,s_1,b} - x_{r,s_2,b}| \leq \text{change}_{p,s_1,s_2,r,b}
+    \]
+    for all $p \in P$, consecutive shifts $s_1,s_2$ at $p$, $r \in R$, $b \in B$
+    \item \textbf{Fairness in shift allocation:}
+    \begin{align*}
+        \text{total\_shifts}_r &= \sum_{s \in S} \sum_{b \in B} x_{r,s,b} \qquad \forall r \in R \\
+        \text{min\_shifts} &\leq \text{total\_shifts}_r \leq \text{max\_shifts} \qquad \forall r \in R
+    \end{align*}
+\end{enumerate}
+
+\end{document}

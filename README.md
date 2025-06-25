@@ -1,6 +1,8 @@
 # Human-Centered Dispatch
 
-*Short description what the project is about*
+This project contains a mathematical optimization model to schedule shifts for track maintanance workers. It is based on the SCIP solver and uses Python to model the problem.
+
+A mathematical formulation of the problem is available here: [Resource_Allocation.pdf](./Resource_Allocation.pdf)
 
 ## Background
 
